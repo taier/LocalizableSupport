@@ -23,8 +23,6 @@
     
     // Subscribe to notifications from LocalizationManager
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(p_localize) name:LocalizationManagerLanguageDidChangeNotification object:nil];
-    
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,7 +33,7 @@
 #pragma mark Table View Delegates
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2; /// TBD change to languages count
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -46,7 +44,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
    [LocalizationManager updateLanguage:(indexPath.row) ? @"en" : @"ru"];
 }
 
