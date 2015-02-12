@@ -81,7 +81,7 @@
     NSString *libraryDirectory = [path firstObject];
     NSString *localizationJSONPath = [libraryDirectory stringByAppendingPathComponent:@"remote_languages.json"];
     
-    NSURL *url = [NSURL URLWithString:@"https://gist.githubusercontent.com/taier/4dc7f74848fd1e552daa/raw/4600987561f4fc6971854db0ffb47df192436afb/languages"];
+    NSURL *url = [NSURL URLWithString:@"https://raw.githubusercontent.com/taier/LocalizableSupport/master/remote_languages.json"];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url
                                              cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
